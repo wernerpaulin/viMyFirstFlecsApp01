@@ -11,12 +11,12 @@ requires = ["hatchling"]
 ################################################################################
 
 [project]
-name = "dev_template_py"
+name = "viMyFirstFlecsApp01"
 # You can chose to use dynamic versioning with hatch or static where you add it manually.
 version = "0.1.0"
-description = "App template for creation of new python based apps"
+description = "VarionImpact, my first app to test the CICD buildchain"
 authors = [
-    { name = "FLECS Technologies GmbH", email = "info@flecs.tech" },
+    { name = "Werner Paulin", email = "info@varionimpact.com" },
 ]
 license = "MIT"
 requires-python = ">= 3.10" # Adjust based on the minimum version of Python that you support
