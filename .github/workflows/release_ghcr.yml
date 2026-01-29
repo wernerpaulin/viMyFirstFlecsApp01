@@ -5,16 +5,14 @@ on:
     types: [ published ]
 jobs:
   build_image:
-    # Remove the following if statement to deploy to GitHub container registry
-    if: false
     uses: ./.github/workflows/build_image.yml
     with:
       tag: ${{ github.event.release.tag_name }}
       registry: ghcr.io
       # Replace this with the lowercase name of the repository
-      app_name: dev-template-py
+      app_name: vimyfirstflecsapp
       # Replace this with the lowercase name of your organization (or user)
-      registry_namespace: flecs-technologies
+      registry_namespace: wernerpaulin
   deploy_ghcr:
     permissions:
       contents: read
@@ -27,9 +25,10 @@ jobs:
       tag: ${{ github.event.release.tag_name }}
       registry: ghcr.io
       # Replace this with the lowercase name of the repository
-      app_name: dev-template-py
+      app_name: vimyfirstflecsapp
       # Replace this with the lowercase name of your organization (or user)
-      registry_namespace: flecs-technologies
+      registry_namespace: wernerpaulin
     secrets:
       username: ${{ github.actor }}
       password: ${{ secrets.GITHUB_TOKEN }}
+

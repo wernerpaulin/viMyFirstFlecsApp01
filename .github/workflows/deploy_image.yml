@@ -10,7 +10,7 @@ on:
       registry:
         type: string
         required: false
-        default: true
+        default: ghcr.io
         description: The registry the image should be deployed to
       app_name:
         type: string
