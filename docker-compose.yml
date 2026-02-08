@@ -1,0 +1,29 @@
+#this docker compose file is only for local testing. It is not used in the FLECS environment.
+#docker-compose up
+version: "3.4"
+services:
+  vimyfirstflecsapp:
+    image: vimyfirstflecsapp:0.2.0
+    container_name: vimyfirstflecsapp.test
+    ports:
+      - "8080:80"
+    environment:
+      - MQTT_HOST=eclipse-mosquitto.test
+    restart: always
+
+  node-red:
+    image: nodered/node-red:4.1.4-22
+    container_name: node-red.text
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./node-red:/data
+    restart: always
+
+  mqtt:
+    image: eclipse-mosquitto:latest
+    container_name: eclipse-mosquitto.test
+    ports:
+      - "1883:1883"
+    restart: always
+    

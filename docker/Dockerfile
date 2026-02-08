@@ -1,3 +1,4 @@
+#docker build -f docker/Dockerfile -t vimyfirstflecsapp:0.2.0 .
 FROM --platform=linux/amd64 python:3.13-slim-bookworm AS builder
 
 RUN apt-get update && \

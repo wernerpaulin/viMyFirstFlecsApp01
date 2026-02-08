@@ -34,7 +34,8 @@ keywords = []
 dependencies = [
     "fastapi>=0.95.0",
     "uvicorn[standard]>=0.23.0",
-    "pydantic>=2.11.7"
+    "pydantic>=2.11.7",
+    "paho-mqtt>=2.0.0"
 ]
 
 [project.urls]
